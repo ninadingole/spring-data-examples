@@ -5,7 +5,7 @@ package com.spring.jdbc.domain;
  */
 public class Employee {
     private long empId;
-    private String name;
+    private String empName;
     private String department;
     private String supervisor;
 
@@ -17,12 +17,12 @@ public class Employee {
         this.empId = empId;
     }
 
-    public String getName() {
-        return name;
+    public String getEmpName() {
+        return empName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEmpName(String name) {
+        this.empName = name;
     }
 
     public String getDepartment() {
@@ -39,5 +39,15 @@ public class Employee {
 
     public void setSupervisor(String supervisor) {
         this.supervisor = supervisor;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", department='" + department + '\'' +
+                ", supervisor='" + supervisor + '\'' +
+                '}';
     }
 }
